@@ -11,15 +11,19 @@ let bgRive = null;
 
 darkBtn.onclick = toggleDarkMode;
 
+document.getElementById('themes').onclick = (e) => {
+  const btn = e.target.closest('a[data-theme]');
+  if (btn) updateTheme(btn.dataset.theme);
+};
+
 function toggleDarkMode() {
   isDarkMode = !isDarkMode;
   localStorage.setItem('darkMode', isDarkMode);
-  updateThemeUI();
+  updateDarkMode();
 }
 
-function updateThemeUI() {
+function updateDarkMode() {
   ui("mode", isDarkMode ? "dark" : "light");
-  // document.body.className = isDarkMode ? 'dark' : 'light';
   darkBtn.checked = isDarkMode;
   if (bgRive) {
     const inputs = bgRive.stateMachineInputs('©2024_alexis_deslandes_erudit.app');
@@ -28,7 +32,12 @@ function updateThemeUI() {
   }
 }
 
-function initRive(themeName) {
+function updateTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  initBgRive(themeName);
+}
+
+function initBgRive(themeName) {
   if (bgRive) bgRive.cleanup();
 
   bgRive = new rive.Rive({
@@ -61,8 +70,8 @@ function handleLayoutChange(e) {
   bgRive.resizeDrawingSurfaceToCanvas();
 }
 
-updateThemeUI();
-initRive(currentTheme);
+updateDarkMode();
+initBgRive(currentTheme);
 handleLayoutChange(isMedium);
 ui("theme", "#F48FB1");
 

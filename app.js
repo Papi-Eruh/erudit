@@ -4,6 +4,7 @@ const backBtn = document.getElementById('back-btn');
 
 backBtn.onclick = () => window.location.hash = '#/';
 window.addEventListener('hashchange', navigate);
+navigate();
 
 function navigate() {
   const hash = window.location.hash || '#/';
