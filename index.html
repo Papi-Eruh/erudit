@@ -41,32 +41,34 @@
     </nav>
   </header>
   <div id="s-bg-container" class="fixed top right bottom left back no-events">
-    <canvas id="bg-canvas" class="page active bottom"></canvas>
+    <canvas id="bg-canvas"></canvas>
   </div>
   <main class="bottom-align center-align">
     <div class="grid middle-align large-space">
       <div class="m6 l5 m l page active left">
-        <div id="m-bg-container" class="round"></div>
+        <div id="m-bg-container" class="round elevate"></div>
       </div>
 
       <div id="page-container" class="s12 m6 l7">
         <!-- Home page -->
         <div id="home" class="page active">
           <div class="s page active bottom">
-            <nav class="scroll">
-              <a href="#/themes" class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/theme.svg" class="responsive" />
-              </a>
-              <a class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/collection.svg" class="responsive" />
-              </a>
-              <div class="small-width small-height round fill elevate"></div>
-              <div class="small-width small-height round primary elevate"></div>
-            </nav>
+            <div class="padding small-blur round">
+              <nav class="scroll">
+                <a href="#/themes" class="tiny-width tiny-height round elevate surface-bright">
+                  <img src="assets/icons/theme.svg" class="responsive" />
+                </a>
+                <a class="tiny-width tiny-height round elevate surface-bright">
+                  <img src="assets/icons/collection.svg" class="responsive" />
+                </a>
+                <div class="tiny-width tiny-height round fill elevate"></div>
+                <div class="tiny-width tiny-height round primary elevate"></div>
+              </nav>
+            </div>
           </div>
           <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
             <nav class="center-align vertical padding">
-              <a class="small-width small-height round elevate surface-bright">
+              <a href="#/themes" class="small-width small-height round elevate surface-bright">
                 <img src="assets/icons/theme.svg" class="responsive" />
               </a>
               <a class="small-width small-height round elevate surface-bright">
@@ -76,12 +78,12 @@
               <div class="small-width small-height round primary"></div>
             </nav>
           </div>
-          <div class="l scroll page active left">
+          <div class="l scroll page active right">
             <div class="grid large-space">
               <div class="l6 small-padding">
                 <div class="row round medium-height fill"></div>
                 <div class="space"></div>
-                <a class="small-width small-height round elevate surface-bright">
+                <a href="#/themes" class="small-width small-height round elevate surface-bright">
                   <img src="assets/icons/theme.svg" class="responsive" />
                 </a>
               </div>
@@ -99,44 +101,42 @@
         <!-- themes page -->
         <div id="themes" class="page">
           <div class="s page active bottom">
-            <nav class="scroll">
+            <div class="padding small-blur round">
+              <nav class="scroll">
+                <a data-theme="japan" class="tiny-width tiny-height round elevate">
+                  <img src="assets/themes/japan-icon.svg" class="responsive" />
+                </a>
+                <a data-theme="egypt" class="tiny-width tiny-height round elevate">
+                  <img src="assets/themes/egypt-icon.svg" class="responsive" />
+                </a>
+              </nav>
+            </div>
+          </div>
+          <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
+            <nav class="center-align vertical padding">
               <a data-theme="japan" class="small-width small-height round elevate">
-                <!-- TODO -->
                 <img src="assets/themes/japan-icon.svg" class="responsive" />
               </a>
               <a data-theme="egypt" class="small-width small-height round elevate">
-                <!-- TODO -->
                 <img src="assets/themes/egypt-icon.svg" class="responsive" />
               </a>
             </nav>
           </div>
-          <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
-            <nav class="center-align vertical padding">
-              <a class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/theme.svg" class="responsive" />
-              </a>
-              <a class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/collection.svg" class="responsive" />
-              </a>
-              <div class="small-width small-height round fill"></div>
-              <div class="small-width small-height round primary"></div>
-            </nav>
-          </div>
-          <div class="l scroll page active left">
+          <div class="l scroll page active right">
             <div class="grid large-space">
               <div class="l6 small-padding">
-                <div class="row round medium-height fill"></div>
+                <div class="round medium-height fill"></div>
                 <div class="space"></div>
-                <a class="small-width small-height round elevate surface-bright">
-                  <img src="assets/icons/theme.svg" class="responsive" />
+                <a data-theme="japan" class="morph small-width small-height round elevate">
+                  <img src="assets/themes/japan-icon.svg" class="responsive" />
                 </a>
               </div>
               <div class="l6 small-padding">
-                <a class="small-width small-height round elevate surface-bright">
-                  <img src="assets/icons/collection.svg" class="responsive" />
+                <a data-theme="egypt" class="small-width small-height round elevate">
+                  <img src="assets/themes/egypt-icon.svg" class="responsive" />
                 </a>
                 <div class="space"></div>
-                <div class="row round medium-height fill"></div>
+                <div class="round medium-height fill"></div>
               </div>
             </div>
           </div>

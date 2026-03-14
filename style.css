@@ -6,6 +6,14 @@
   transition: background-color 1200ms ease, background 1200ms ease, color 1200ms ease, border-color 1200ms ease, box-shadow 1200ms ease !important;
 }
 
+.tiny-height {
+  block-size: 8rem;
+}
+
+.tiny-width {
+  inline-size: 8rem;
+}
+
 .elevate {
   box-shadow: var(--shadow-erd) !important;
 }
