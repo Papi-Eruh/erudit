@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Erudit</title>
+  <link href="https://cdn.jsdelivr.net/npm/beercss@4.0.16/dist/cdn/beer.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@4.0.16/dist/cdn/beer.min.js"></script>
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
+  <script src="https://unpkg.com/@rive-app/canvas"></script>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="music.js"></script>
+  <script type="module" src="theme.js"></script>
+</head>
+
+<body>
+  <header class="absolute top left right front white-text">
+    <nav>
+      <button class="circle secondary" id="back-btn" style="display:none">
+        <i>arrow_back</i>
+      </button>
+      <div class="max"></div>
+      <label class="switch icon">
+        <input id="music-btn" type="checkbox">
+        <span>
+          <i>music_note</i>
+        </span>
+      </label>
+      <label class="switch icon">
+        <input id="dark-btn" type="checkbox">
+        <span>
+          <i>dark_mode</i>
+        </span>
+      </label>
+    </nav>
+  </header>
+  <div id="s-bg-container" class="fixed top right bottom left back no-events">
+    <canvas id="bg-canvas" class="page active bottom"></canvas>
+  </div>
+  <main class="bottom-align center-align">
+    <div class="grid middle-align large-space">
+      <div class="m6 l5 m l page active left">
+        <div id="m-bg-container" class="round"></div>
+      </div>
+
+      <div class="s12 m6 l7">
+        <div class="s page active bottom">
+          <nav class="scroll">
+            <div class="small-width small-height round fill elevate"></div>
+            <div class="small-width small-height round primary elevate"></div>
+            <div class="small-width small-height round fill elevate"></div>
+            <div class="small-width small-height round primary elevate"></div>
+          </nav>
+        </div>
+        <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
+          <nav class="center-align vertical">
+            <div class="small-width small-height round fill"></div>
+            <div class="small-width small-height round primary"></div>
+            <div class="small-width small-height round fill"></div>
+            <div class="small-width small-height round primary"></div>
+          </nav>
+        </div>
+        <div class="l scroll page active left">
+          <div class="grid large-space">
+            <div class="l6">
+              <div class="row round medium-height fill"></div>
+              <div class="space"></div>
+              <div class="row round small-height primary"></div>
+            </div>
+            <div class="l6">
+              <div class="row round small-height primary"></div>
+              <div class="space"></div>
+              <div class="row round medium-height fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <audio id="bg-music" src="assets/musics/home.mp3" loop></audio>
+</body>
