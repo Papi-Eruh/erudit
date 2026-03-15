@@ -74,7 +74,9 @@
               <a class="small-width small-height round elevate surface-bright">
                 <img src="assets/icons/collection.svg" class="responsive" />
               </a>
-              <div class="small-width small-height round fill"></div>
+              <a href="#/flashcards" class="small-width small-height round elevate surface-bright padding">
+                <img src="assets/icons/chest.svg" class="responsive" />
+              </a>
               <div class="small-width small-height round primary"></div>
             </nav>
           </div>
@@ -142,6 +144,83 @@
           </div>
         </div>
 
+        <!-- flashcards page -->
+        <div id="flashcards" class="page">
+          <div class="s page active bottom">
+            <div class="row vertical" style="height: 90dvh;">
+
+              <div class="elevate large-padding round medium-width small-blur">
+                <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
+                <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
+              </div>
+
+              <!-- Add bottom shadow custom and delete bottom small-blur-->
+              <div class="elevate large-padding round medium-width small-blur">
+                <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
+                <p class="large-text left-align">Blanc</p>
+              </div>
+              <div class="max"></div>
+              <div class="row center-align">
+                <nav class="group connected primary-container">
+                  <button id="quiz-wrong" class="left-round extra" disabled>
+                    <i>close</i>
+                  </button>
+                  <button id="quiz-reveal" class="no-round extra">
+                    <i>visibility</i>
+                  </button>
+                  <button id="quiz-next" class="no-round extra" disabled>
+                    <i>arrow_forward</i>
+                  </button>
+                  <button id="quiz-correct" class="right-round extra" disabled>
+                    <i>check</i>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="m l page active">
+            <!-- add flashcard -->
+            <div class="page bottom">
+              <div class="middle-align center-align">
+                <button class="extra circle large-padding">
+                  <i>add</i>
+                </button>
+              </div>
+            </div>
+            <div class="page active right">
+              <div class="middle-align center-align vertical">
+                <div class="elevate large-padding round medium-width surface-bright">
+                  <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
+                  <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
+                </div>
+                <div class="space"></div>
+
+                <div class="elevate large-padding round medium-width surface-bright">
+                  <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
+                  <p class="large-text left-align">Blanc</p>
+                </div>
+                <div class="space"></div>
+                <div class="row center-align">
+                  <nav class="group connected primary-container">
+                    <button id="quiz-wrong" class="left-round extra" disabled>
+                      <i>close</i>
+                    </button>
+                    <button id="quiz-reveal" class="no-round extra">
+                      <i>visibility</i>
+                    </button>
+                    <button id="quiz-next" class="no-round extra" disabled>
+                      <i>arrow_forward</i>
+                    </button>
+                    <button id="quiz-correct" class="right-round extra" disabled>
+                      <i>check</i>
+                    </button>
+                  </nav>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
