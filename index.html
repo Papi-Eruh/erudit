@@ -20,216 +20,215 @@
 </head>
 
 <body>
-  <header class="absolute top left right front white-text">
-    <nav>
-      <button class="circle secondary" id="back-btn" style="display:none">
-        <i>arrow_back</i>
-      </button>
-      <div class="max"></div>
-      <label class="switch icon">
-        <input id="music-btn" type="checkbox">
-        <span>
-          <i>music_note</i>
-        </span>
-      </label>
-      <label class="switch icon">
-        <input id="dark-btn" type="checkbox">
-        <span>
-          <i>dark_mode</i>
-        </span>
-      </label>
-    </nav>
-  </header>
-  <div id="s-bg-container" class="fixed top right bottom left back no-events">
-    <canvas id="bg-canvas"></canvas>
-  </div>
-  <main class="bottom-align center-align">
-    <div class="grid middle-align large-space">
-      <div class="m6 l5 m l page active left">
-        <div id="m-bg-container" class="round elevate"></div>
+  <div class="erd-bottom-shadow">
+    <div class="erd-top-shadow">
+      <header class="absolute top left right front white-text">
+        <nav>
+          <button class="circle secondary" id="back-btn" style="display:none">
+            <i>arrow_back</i>
+          </button>
+          <div class="max"></div>
+          <label class="switch icon">
+            <input id="music-btn" type="checkbox">
+            <span>
+              <i>music_note</i>
+            </span>
+          </label>
+          <label class="switch icon">
+            <input id="dark-btn" type="checkbox">
+            <span>
+              <i>dark_mode</i>
+            </span>
+          </label>
+        </nav>
+      </header>
+      <div id="s-bg-container" class="fixed top right bottom left back no-events">
+        <canvas id="bg-canvas"></canvas>
       </div>
+      <main class="bottom-align center-align">
+        <div class="grid middle-align large-space">
+          <div class="m6 l5 m l page active left">
+            <div id="m-bg-container" class="round elevate"></div>
+          </div>
 
-      <div id="page-container" class="s12 m6 l7">
-        <!-- Home page -->
-        <div id="home" class="page active">
-          <div class="s page active bottom">
-            <div class="padding small-blur round">
-              <nav class="scroll">
-                <a href="#/themes" class="tiny-width tiny-height round elevate surface-bright">
-                  <img src="assets/icons/theme.svg" class="responsive" />
-                </a>
-                <a class="tiny-width tiny-height round elevate surface-bright">
-                  <img src="assets/icons/collection.svg" class="responsive" />
-                </a>
-                <a href="#/flashcards" class="tiny-width tiny-height round elevate surface-bright padding">
-                  <img src="assets/icons/chest.svg" class="responsive" />
-                </a>
-                <div class="tiny-width tiny-height round primary elevate"></div>
-              </nav>
-            </div>
-          </div>
-          <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
-            <nav class="center-align vertical padding">
-              <a href="#/themes" class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/theme.svg" class="responsive" />
-              </a>
-              <a class="small-width small-height round elevate surface-bright">
-                <img src="assets/icons/collection.svg" class="responsive" />
-              </a>
-              <a href="#/flashcards" class="small-width small-height round elevate surface-bright padding">
-                <img src="assets/icons/chest.svg" class="responsive" />
-              </a>
-              <div class="small-width small-height round primary"></div>
-            </nav>
-          </div>
-          <div class="l scroll page active right">
-            <div class="grid large-space">
-              <div class="l6 small-padding">
-                <a href="#/flashcards" class="small-width medium-height round elevate surface-bright">
-                  <img src="assets/icons/chest.svg" class="responsive" />
-                </a>
-                <div class="space"></div>
-                <a href="#/themes" class="small-width small-height round elevate surface-bright">
-                  <img src="assets/icons/theme.svg" class="responsive" />
-                </a>
-              </div>
-              <div class="l6 small-padding">
-                <a class="small-width small-height round elevate surface-bright">
-                  <img src="assets/icons/collection.svg" class="responsive" />
-                </a>
-                <div class="space"></div>
-                <div class="row round medium-height fill"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- themes page -->
-        <div id="themes" class="page">
-          <div class="s page active bottom">
-            <div class="padding small-blur round">
-              <nav class="scroll">
-                <a data-theme="japan" class="tiny-width tiny-height round elevate surface-container-lowest">
-                  <img src="assets/themes/japan-icon.svg" class="responsive" />
-                </a>
-                <a data-theme="egypt" class="tiny-width tiny-height round elevate surface-container-lowest">
-                  <img src="assets/themes/egypt-icon.svg" class="responsive" />
-                </a>
-              </nav>
-            </div>
-          </div>
-          <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
-            <nav class="center-align vertical padding">
-              <a data-theme="japan" class="small-width small-height round elevate surface-container-lowest">
-                <img src="assets/themes/japan-icon.svg" class="responsive" />
-              </a>
-              <a data-theme="egypt" class="small-width small-height round elevate surface-container-lowest">
-                <img src="assets/themes/egypt-icon.svg" class="responsive" />
-              </a>
-            </nav>
-          </div>
-          <div class="l scroll page active right">
-            <div class="grid large-space">
-              <div class="l6 small-padding">
-                <div class="round medium-height fill"></div>
-                <div class="space"></div>
-                <a data-theme="japan" class="small-width small-height round elevate surface-container-lowest">
-                  <img src="assets/themes/japan-icon.svg" class="responsive" />
-                </a>
-              </div>
-              <div class="l6 small-padding">
-                <a data-theme="egypt" class="small-width small-height round elevate surface-container-lowest">
-                  <img src="assets/themes/egypt-icon.svg" class="responsive" />
-                </a>
-                <div class="space"></div>
-                <div class="round medium-height fill"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- flashcards page -->
-        <div id="flashcards" class="page">
-          <div class="s page active bottom">
-            <div class="row vertical" style="height: 90dvh;">
-
-              <div class="elevate large-padding round medium-width small-blur">
-                <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
-                <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
-              </div>
-
-              <!-- Add bottom shadow custom and delete bottom small-blur-->
-              <div class="elevate large-padding round medium-width small-blur">
-                <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
-                <p class="large-text left-align">Blanc</p>
-              </div>
-              <div class="max"></div>
-              <div class="row center-align">
-                <nav class="group connected primary-container">
-                  <button id="quiz-wrong" class="left-round extra" disabled>
-                    <i>close</i>
-                  </button>
-                  <button id="quiz-reveal" class="no-round extra">
-                    <i>visibility</i>
-                  </button>
-                  <button id="quiz-next" class="no-round extra" disabled>
-                    <i>arrow_forward</i>
-                  </button>
-                  <button id="quiz-correct" class="right-round extra" disabled>
-                    <i>check</i>
-                  </button>
+          <div id="page-container" class="s12 m6 l7">
+            <!-- Home page -->
+            <div id="home" class="page active">
+              <div class="s page active bottom">
+                <nav class="scroll padding">
+                  <a href="#/themes" class="tiny-width tiny-height round elevate surface-bright">
+                    <img src="assets/icons/theme.svg" class="responsive" />
+                  </a>
+                  <a class="tiny-width tiny-height round elevate surface-bright">
+                    <img src="assets/icons/collection.svg" class="responsive" />
+                  </a>
+                  <a href="#/flashcards" class="tiny-width tiny-height round elevate surface-bright padding">
+                    <img src="assets/icons/chest.svg" class="responsive" />
+                  </a>
+                  <div class="tiny-width tiny-height round primary elevate"></div>
                 </nav>
               </div>
-            </div>
-          </div>
-          <div class="m l page active">
-            <!-- add flashcard -->
-            <div class="page bottom">
-              <div class="middle-align center-align">
-                <button class="extra circle large-padding">
-                  <i>add</i>
-                </button>
+              <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
+                <nav class="center-align vertical padding">
+                  <a href="#/themes" class="small-width small-height round elevate surface-bright">
+                    <img src="assets/icons/theme.svg" class="responsive" />
+                  </a>
+                  <a class="small-width small-height round elevate surface-bright">
+                    <img src="assets/icons/collection.svg" class="responsive" />
+                  </a>
+                  <a href="#/flashcards" class="small-width small-height round elevate surface-bright padding">
+                    <img src="assets/icons/chest.svg" class="responsive" />
+                  </a>
+                  <div class="small-width small-height round primary"></div>
+                </nav>
+              </div>
+              <div class="l scroll page active right">
+                <div class="grid large-space">
+                  <div class="l6 small-padding">
+                    <a href="#/flashcards" class="small-width medium-height round elevate surface-bright">
+                      <img src="assets/icons/chest.svg" class="responsive" />
+                    </a>
+                    <div class="space"></div>
+                    <a href="#/themes" class="small-width small-height round elevate surface-bright">
+                      <img src="assets/icons/theme.svg" class="responsive" />
+                    </a>
+                  </div>
+                  <div class="l6 small-padding">
+                    <a class="small-width small-height round elevate surface-bright">
+                      <img src="assets/icons/collection.svg" class="responsive" />
+                    </a>
+                    <div class="space"></div>
+                    <div class="row round medium-height fill"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="page active right">
-              <div class="middle-align center-align vertical">
-                <div class="elevate large-padding round medium-width surface-bright">
-                  <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
-                  <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
-                </div>
-                <div class="space"></div>
 
-                <div class="elevate large-padding round medium-width surface-bright">
-                  <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
-                  <p class="large-text left-align">Blanc</p>
+            <!-- themes page -->
+            <div id="themes" class="page">
+              <div class="s page active bottom">
+                <nav class="scroll padding">
+                  <a data-theme="japan" class="tiny-width tiny-height round elevate surface-container-lowest">
+                    <img src="assets/themes/japan-icon.svg" class="responsive" />
+                  </a>
+                  <a data-theme="egypt" class="tiny-width tiny-height round elevate surface-container-lowest">
+                    <img src="assets/themes/egypt-icon.svg" class="responsive" />
+                  </a>
+                </nav>
+              </div>
+              <div class="m page active right scroll" style="aspect-ratio: 9/19.5;">
+                <nav class="center-align vertical padding">
+                  <a data-theme="japan" class="small-width small-height round elevate surface-container-lowest">
+                    <img src="assets/themes/japan-icon.svg" class="responsive" />
+                  </a>
+                  <a data-theme="egypt" class="small-width small-height round elevate surface-container-lowest">
+                    <img src="assets/themes/egypt-icon.svg" class="responsive" />
+                  </a>
+                </nav>
+              </div>
+              <div class="l scroll page active right">
+                <div class="grid large-space">
+                  <div class="l6 small-padding">
+                    <div class="round medium-height fill"></div>
+                    <div class="space"></div>
+                    <a data-theme="japan" class="small-width small-height round elevate surface-container-lowest">
+                      <img src="assets/themes/japan-icon.svg" class="responsive" />
+                    </a>
+                  </div>
+                  <div class="l6 small-padding">
+                    <a data-theme="egypt" class="small-width small-height round elevate surface-container-lowest">
+                      <img src="assets/themes/egypt-icon.svg" class="responsive" />
+                    </a>
+                    <div class="space"></div>
+                    <div class="round medium-height fill"></div>
+                  </div>
                 </div>
-                <div class="space"></div>
-                <div class="row center-align">
-                  <nav class="group connected primary-container">
-                    <button id="quiz-wrong" class="left-round extra" disabled>
-                      <i>close</i>
-                    </button>
-                    <button id="quiz-reveal" class="no-round extra">
-                      <i>visibility</i>
-                    </button>
-                    <button id="quiz-next" class="no-round extra" disabled>
-                      <i>arrow_forward</i>
-                    </button>
-                    <button id="quiz-correct" class="right-round extra" disabled>
-                      <i>check</i>
-                    </button>
-                  </nav>
-                </div>
+              </div>
+            </div>
 
+            <!-- flashcards page -->
+            <div id="flashcards" class="page">
+              <div class="s page active bottom">
+                <div class="row vertical" style="height: 90dvh;">
+
+                  <div class="elevate large-padding round medium-width small-blur">
+                    <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
+                    <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
+                  </div>
+
+                  <div class="elevate large-padding round medium-width small-blur">
+                    <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
+                    <p class="large-text left-align">Blanc</p>
+                  </div>
+                  <div class="max"></div>
+                  <div class="row center-align padding">
+                    <nav class="group connected primary-container">
+                      <button id="quiz-wrong" class="left-round extra" disabled>
+                        <i>close</i>
+                      </button>
+                      <button id="quiz-reveal" class="no-round extra">
+                        <i>visibility</i>
+                      </button>
+                      <button id="quiz-next" class="no-round extra" disabled>
+                        <i>arrow_forward</i>
+                      </button>
+                      <button id="quiz-correct" class="right-round extra" disabled>
+                        <i>check</i>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="m l page active">
+                <!-- add flashcard -->
+                <div class="page bottom">
+                  <div class="middle-align center-align">
+                    <button class="extra circle large-padding">
+                      <i>add</i>
+                    </button>
+                  </div>
+                </div>
+                <div class="page active right">
+                  <div class="middle-align center-align vertical">
+                    <div class="elevate large-padding round medium-width surface-bright">
+                      <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
+                      <progress class="wavy large" id="quiz-progress-bar" value="4" max="10"></progress>
+                    </div>
+                    <div class="space"></div>
+
+                    <div class="elevate large-padding round medium-width surface-bright">
+                      <h6 id="quiz-question" class="left-align">Quelle est la couleur du cheval blanc d'Henry IV ?</h6>
+                      <p class="large-text left-align">Blanc</p>
+                    </div>
+                    <div class="space"></div>
+                    <div class="row center-align">
+                      <nav class="group connected primary-container">
+                        <button id="quiz-wrong" class="left-round extra" disabled>
+                          <i>close</i>
+                        </button>
+                        <button id="quiz-reveal" class="no-round extra">
+                          <i>visibility</i>
+                        </button>
+                        <button id="quiz-next" class="no-round extra" disabled>
+                          <i>arrow_forward</i>
+                        </button>
+                        <button id="quiz-correct" class="right-round extra" disabled>
+                          <i>check</i>
+                        </button>
+                      </nav>
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-      </div>
 
+      </main>
+
+      <audio id="bg-music" src="assets/musics/home.mp3" loop></audio>
     </div>
-
-  </main>
-
-  <audio id="bg-music" src="assets/musics/home.mp3" loop></audio>
+  </div>
 </body>

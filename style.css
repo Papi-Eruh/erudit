@@ -6,6 +6,21 @@
   transition: background-color 1200ms ease, background 1200ms ease, color 1200ms ease, border-color 1200ms ease, box-shadow 1200ms ease !important;
 }
 
+@media (max-width: 600px) {
+  .erd-bottom-shadow {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 30%);
+  }
+
+  .erd-top-shadow {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 20%);
+  }
+
+  :is(.erd-top-shadow, .erd-bottom-shadow) {
+    background-color: transparent !important;
+  }
+}
+
+
 .tiny-height {
   block-size: 8rem;
 }
