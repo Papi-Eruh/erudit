@@ -1,3 +1,5 @@
+import { bus, newQuizEventName } from "./bus.js";
+
 const darkBtn = document.getElementById('dark-btn');
 const sBgContainer = document.getElementById("s-bg-container");
 const mBgContainer = document.getElementById("m-bg-container");
@@ -7,6 +9,7 @@ const isMedium = window.matchMedia("(min-width: 601px)");
 
 let isDarkMode = localStorage.getItem('darkMode') === 'true';
 let currentTheme = localStorage.getItem('theme') || 'japan';
+let bgRiveInputs = [];
 let bgRive = null;
 
 darkBtn.onclick = toggleDarkMode;
@@ -48,11 +51,11 @@ function initBgRive(themeName) {
     autoplay: true,
     onLoad: () => {
       bgRive.resizeDrawingSurfaceToCanvas();
-      const inputs = bgRive.stateMachineInputs('©2024_alexis_deslandes_erudit.app');
-      if (inputs) {
-        const appearTrigger = inputs.find(i => i.name === 'Appear');
+      bgRiveInputs = bgRive.stateMachineInputs('©2024_alexis_deslandes_erudit.app');
+      if (bgRiveInputs) {
+        const appearTrigger = bgRiveInputs.find(i => i.name === 'Appear');
         if (appearTrigger) appearTrigger.fire();
-        const darkModeInput = inputs.find(i => i.name === 'darkmode');
+        const darkModeInput = bgRiveInputs.find(i => i.name === 'darkmode');
         if (darkModeInput) darkModeInput.value = isDarkMode;
       }
     }
@@ -79,4 +82,9 @@ ui("theme", "#F48FB1");
 isMedium.addEventListener("change", handleLayoutChange);
 window.addEventListener('resize', () => {
   bgRive.resizeDrawingSurfaceToCanvas();
+});
+
+bus.addEventListener(newQuizEventName, () => {
+  const owlTrigger = bgRiveInputs.find(i => i.name === 'Owl');
+  if (owlTrigger) owlTrigger.fire();
 });

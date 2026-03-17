@@ -17,6 +17,7 @@
   <script type="module" src="app.js"></script>
   <script type="module" src="music.js"></script>
   <script type="module" src="theme.js"></script>
+  <script type="module" src="quiz.js"></script>
 </head>
 
 <body>
@@ -46,9 +47,9 @@
         <canvas id="bg-canvas"></canvas>
       </div>
       <main class="bottom-align center-align">
-        <div class="grid middle-align large-space">
-          <div class="m6 l5 m l page active left">
-            <div id="m-bg-container" class="round elevate"></div>
+        <div class="grid middle-align no-space">
+          <div class="m6 l5 m l">
+            <div id="m-bg-container" class="round elevate page active left"></div>
           </div>
 
           <div id="page-container" class="s12 m6 l7">
@@ -149,7 +150,15 @@
             <!-- flashcards page -->
             <div id="flashcards" class="page">
               <div class="s page active bottom">
-                <div class="row vertical" style="height: 90dvh;">
+                <div class="page active">
+                  <div class="large-padding">
+                    <button class="extra circle large-padding" data-ui="#add-dialog">
+                      <i>add</i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="page row vertical" style="height: 90dvh;">
 
                   <div class="elevate large-padding round medium-width small-blur">
                     <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
@@ -181,14 +190,14 @@
               </div>
               <div class="m l page active">
                 <!-- add flashcard -->
-                <div class="page bottom">
+                <div class="page active bottom">
                   <div class="middle-align center-align">
-                    <button class="extra circle large-padding">
+                    <button class="extra circle large-padding" data-ui="#add-dialog">
                       <i>add</i>
                     </button>
                   </div>
                 </div>
-                <div class="page active right">
+                <div class="page right">
                   <div class="middle-align center-align vertical">
                     <div class="elevate large-padding round medium-width surface-bright">
                       <h4 class="primary-text left-align" id="quiz-progress-text">4/10</h4>
@@ -228,6 +237,21 @@
 
       </main>
 
+      <dialog id="add-dialog">
+        <h5>Add New Quiz</h5>
+        <div class="field label border">
+          <input type="text" id="new-question" autocomplete="off">
+          <label>Question</label>
+        </div>
+        <div class="field label border">
+          <input type="text" id="new-answer" autocomplete="off">
+          <label>Answer</label>
+        </div>
+        <nav class="right-align">
+          <button class="transparent link" data-ui="#add-dialog">Cancel</button>
+          <button class="primary" id="save-quiz-btn">Save</button>
+        </nav>
+      </dialog>
       <audio id="bg-music" src="assets/musics/home.mp3" loop></audio>
     </div>
   </div>
