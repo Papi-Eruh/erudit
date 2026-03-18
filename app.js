@@ -1,3 +1,5 @@
+import { initQuizView } from "./quiz.js";
+
 const pages = document.querySelectorAll('#page-container > .page');
 const home = document.getElementById('home');
 const backBtn = document.getElementById('back-btn');
@@ -19,7 +21,7 @@ function navigate() {
     if (targetPage) {
       targetPage.classList.add('active');
       backBtn.style.display = 'block';
-      if (pageId === 'quizzes') startQuizSession();
+      if (pageId === 'quizzes') initQuizView();
     } else {
       home.classList.add('active');
       backBtn.style.display = 'none';

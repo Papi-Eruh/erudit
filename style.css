@@ -2,10 +2,6 @@
   --shadow-erd: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
-* {
-  transition: background-color 1200ms ease, background 1200ms ease, color 1200ms ease, border-color 1200ms ease, box-shadow 1200ms ease !important;
-}
-
 @media (max-width: 600px) {
   .erd-bottom-shadow {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 30%);
@@ -40,5 +36,8 @@
 
 #m-bg-container {
   aspect-ratio: 9/19.5;
-  max-height: 40rem !important;
+}
+
+.ml-page-container {
+  height: 40rem;
 }
