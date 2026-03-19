@@ -2,6 +2,11 @@
   --shadow-erd: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* magic */
+html {
+  height: calc(100% + env(safe-area-inset-top));
+}
+
 .theme-switching * {
   transition: background-color 1200ms ease, color 1200ms ease !important;
 }
