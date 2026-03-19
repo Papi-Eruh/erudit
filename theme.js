@@ -12,6 +12,11 @@ let currentTheme = localStorage.getItem('theme') || 'japan';
 let bgRiveInputs = [];
 let bgRive = null;
 
+const themeColors = {
+  japan: "#F48FB1",
+  egypt: "#01687D"
+};
+
 darkBtn.onclick = toggleDarkMode;
 
 document.getElementById('themes').onclick = (e) => {
@@ -22,10 +27,18 @@ document.getElementById('themes').onclick = (e) => {
 function toggleDarkMode() {
   isDarkMode = !isDarkMode;
   localStorage.setItem('darkMode', isDarkMode);
-  updateDarkMode();
+  updateDarkMode(true);
 }
 
-function updateDarkMode() {
+function triggerThemeTransition() {
+  document.body.classList.add('theme-switching');
+  setTimeout(() => {
+    document.body.classList.remove('theme-switching');
+  }, 1200);
+}
+
+function updateDarkMode(isActive) {
+  if (isActive) triggerThemeTransition();
   ui("mode", isDarkMode ? "dark" : "light");
   darkBtn.checked = isDarkMode;
   if (bgRive) {
@@ -36,8 +49,10 @@ function updateDarkMode() {
 }
 
 function updateTheme(themeName) {
+  triggerThemeTransition();
   localStorage.setItem('theme', themeName);
   initBgRive(themeName);
+  ui("theme", themeColors[themeName] || themeColors.japan);
 }
 
 function initBgRive(themeName) {
@@ -76,7 +91,7 @@ function handleLayoutChange(e) {
 updateDarkMode();
 initBgRive(currentTheme);
 handleLayoutChange(isMedium);
-ui("theme", "#F48FB1");
+ui("theme", themeColors[currentTheme] || themeColors.japan);
 
 
 isMedium.addEventListener("change", handleLayoutChange);

@@ -2,6 +2,10 @@
   --shadow-erd: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
+.theme-switching * {
+  transition: background-color 1200ms ease, color 1200ms ease !important;
+}
+
 @media (max-width: 600px) {
   .erd-bottom-shadow {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 30%);
@@ -40,4 +44,12 @@
 
 .ml-page-container {
   height: 40rem;
+}
+
+progress.quiz-progress-bar::-webkit-progress-value {
+  transition: width 600ms ease;
+}
+
+progress.quiz-progress-bar::-moz-progress-bar {
+  transition: width 600ms ease;
 }
